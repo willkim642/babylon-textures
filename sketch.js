@@ -34,36 +34,19 @@ var createScene = function () {
     //color background black
     scene.clearColor = new BABYLON.Color3.FromHexString('#000');
 
-    /*
-    //create sphere w params (x, y, z, diameter)
-    var s1 = createSphere(-1, 1, -1, 2);
-
-    //wrap sphere in material from URL file
-    s1.material = fileMat('https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', scene);
-    
-    //create sphere
-    var s2 = createSphere(2, 2, 0.5, 2);
-
-    //wrap sphere in material from local file
-    s2.material = fileMat('moon.jpg', scene);
-    
-    //create box with params x, y, z, width, height, ddepth
-    var b1 = createBox(2, -2, 2, 1, 1, 1);
-    var b2 = createBox(3, -2, 2, 1, 1, 1);
-    b2.position.x = b2.position.x += 1;
-    //wrap box in material colored with hex code
-    b1.material = hexMat('#ff0000');
-    b1.rotation.z += Math.PI / 4;
-    b2.material = hexMat('#0d0b73');
-
-    var b3 = createBox(0, -2, -1.5, 2, 2, 2);
-
-    //wrap box in material from local file
-    b3.material = fileMat('why.png');
-    */
-
     var b1 = createBox(0, -5, 0, 60, 1, 10);
-    b1.material = fileMat('wood.jpg');
+    b1.material = hexMat('#0d0b73');
+
+    var b2 = createBox(0, -2.5, 1, 4, 4, 4);
+    b2.material = fileMat('fantasy.jpg');
+
+    var b3 = createBox(0.5, -0.25, -0.25, 0.25, 0.25, 0.25);
+    b3.material = fileMat('reality.jpg');
+    b3.rotation.y += Math.PI / 4;
+
+    var b4 = createBox(0.8, -0.25, 0.75, 0.4, 0.4, 0.4);
+    b4.material = fileMat('reality.jpg');
+    b4.rotation.y += Math.PI / 6;
 
     return scene;
 };
