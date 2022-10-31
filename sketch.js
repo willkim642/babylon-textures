@@ -34,9 +34,11 @@ var createScene = function () {
     //color background black
     scene.clearColor = new BABYLON.Color3.FromHexString('#000');
 
+    //creating a ground
     var b1 = createBox(0, -5, 0, 60, 1, 10);
     b1.material = hexMat('#0d0b73');
 
+    //creating the various cubes that make up the piece
     var b2 = createBox(0, -2.5, 1, 4, 4, 4);
     b2.material = fileMat('fantasy.jpg');
 
@@ -47,6 +49,19 @@ var createScene = function () {
     var b4 = createBox(0.8, -0.25, 0.75, 0.4, 0.4, 0.4);
     b4.material = fileMat('reality.jpg');
     b4.rotation.y += Math.PI / 6;
+    b4.rotation.x += Math.PI / 2;
+
+    var b5 = createBox(1.3, -0.25, -1, 0.15, 0.15, 0.15);
+    b5.material = fileMat('reality.jpg');
+    b5.rotation.y += Math.PI / 17;
+
+    var b6 = createBox(-1.2, 0.25, 0.75, 0.75, 0.75, 0.75);
+    b6.material = fileMat('reality.jpg');
+    b6.rotation.y += Math.PI / 5;
+
+    var b7 = createBox(-3.6, -4, -0.83, 0.3, 0.3, 0.3);
+    b7.material = fileMat('reality.jpg');
+    b7.rotation.y += Math.PI / 19;
 
     return scene;
 };
